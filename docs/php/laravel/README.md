@@ -1,1 +1,48 @@
 # Laravel
+
+## Routing
+
+* You **MUST** split the top-level route groups (like `app` & `admin`) into different route files.
+* You **MUST NOT** use a `namespace()` for route groups.
+* You **MUST** use `Route::prefix()->group()` for multiple routes with the same prefix.
+* You **MUST** use the HTTP verb as first method.
+  * `Route::name()->get()` => `Route::get()->name()`
+
+### Names
+
+* You **MUST** use the namespace, controller, action as route name separated by dots.
+  * `admin.users.index`
+* You **MUST** use `lower_snake_case` and `dot.notation` for route names.
+* You **MUST** use plural version for route names.
+  * `admin.user.index` => `admin.users.index`
+
+### Parameters
+
+* You **MUST** use `{lowerCamelCase}` for route parameters.
+* The parameter name **MUST** match the action argument.
+* You **SHOULD** use patterns for route parameters.
+* You **MUST** use model binding instead of custom resolving.
+
+### Paths
+
+* You **MUST** use `kebab-case` for path segments.
+
+### Naming
+
+## Controllers
+
+The controller is only a class to receive a request and call business logic with received data.
+
+* It **MUST NOT** authorize the request itself.
+* It **MUST NOT** validate the request itself.
+* It **MUST NOT** contain business logic.
+* It **MUST** use dependency injection if another class is needed.
+* It **SHOULD NOT** extend the base controller `\App\Http\Controllers\Controller` because everything it provides **MUST** be done in a form request, middleware or any other responsible class.
+
+### Naming
+
+* Controllers **MUST** be suffixed by `Controller`.
+* Resource controllers **MUST** use the plural resource name.
+  * `UserController` => `UsersController`
+* Resource controllers **MUST** stick to CRUD keywords (`index`, `create`, `store`, `show`, `edit`, `update`, `destroy`).
+* If you need another action you **MUST** use a new resource controller or an invokable controller for a single action.
