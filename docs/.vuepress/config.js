@@ -7,6 +7,7 @@ module.exports = {
             { text: 'Home', link: '/' },
             { text: 'PHP', link: '/php/' },
             { text: 'JS', link: '/js/' },
+            { text: 'API', link: '/api/' },
             { text: 'GitHub', link: 'https://github.com/Gummibeer/eg-guidelines' },
         ],
         sidebar: {
@@ -17,6 +18,9 @@ module.exports = {
             '/js/': [
                 '',
                 '/js/vue/',
+            ],
+            '/api/': [
+                '',
             ],
         }
     }
