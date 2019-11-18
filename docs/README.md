@@ -1,8 +1,9 @@
 ---
 home: true
+heroImage: /logo.svg
 heroText: Elgboods Guidelines
 tagline: This site contains a set of guidelines we follow because consistency is one of the most valuable traits of maintainable software.
-footer: MIT Licensed | Copyright © 2019-present Elbgoods GmbH
+footer: Copyright © 2019-present Elbgoods GmbH
 ---
 
 ## Keyword definition
