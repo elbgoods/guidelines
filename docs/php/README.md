@@ -41,7 +41,17 @@ You **MUST NOT** use docblocks for methods that can be fully type hinted (unless
 You **SHOULD** only add a description when it provides more context than the method signature itself. 
 You **MUST** use full sentences for descriptions, including a period at the end.
 
+## Helpers
+
+Helpers are files with global functions not wrapped inside a class.
+
+* You **MUST** reduce the amount of helper files to an absolute minimum - in best case a single one or none.
+* Helper functions **MUST** wrap an already available method and **MUST NOT** introduce new logic.
+
 ## Naming
+
+* You **MUST NOT** use a prefix to indicate it's visibility.
+* You **MUST NOT** use a prefix to indicate it's type.
 
 ### Namespaces
 
@@ -60,8 +70,6 @@ You **MUST** use full sentences for descriptions, including a period at the end.
 ### Properties
 
 * You **MUST** use `$lowerCamelCase` for property names.
-* You **MUST NOT** use a prefix to indicate it's visibility.
-* You **MUST NOT** use a prefix to indicate it's type.
 
 ### Methods
 
@@ -69,8 +77,19 @@ You **MUST** use full sentences for descriptions, including a period at the end.
 * You **MUST** prefix methods with `bool` return by `is` or `has`.
 * You **MUST** prefix getter/accessor methods by `get`.
 * You **MUST** prefix setter/mutator methods by `set`.
-* You **MUST NOT** use a prefix to indicate it's visibility.
-* You **MUST NOT** use a prefix to indicate it's type.
+
+### Functions
+
+* You **MUST** use `lower_snake_case()` for function names.
+* You **MUST** prefix methods with `bool` return by `is_` or `has_`.
+
+### Variables
+
+* You **MUST** use `$lowerCamelCase` for variable names.
+
+### Array Keys
+
+* You **MUST** use `lower_snake_case` for array keys as long as not **REQUIRED** different by a foreign package or API.
 
 ## Conditions
 
