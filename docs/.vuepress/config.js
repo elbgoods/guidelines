@@ -1,4 +1,6 @@
 module.exports = {
+    base: process.env.BASE || '/',
+    title: 'Elbgoods Guidelines',
     themeConfig: {
         sidebarDepth: 2,
         nav: [

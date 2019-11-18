@@ -16,7 +16,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install
       - name: Build Docs
-        run: yarn docs:build
+        run: BASE='/eg-guidelines/' yarn docs:build
       - name: Deploy Docs
         uses: maxheld83/ghpages@v0.2.1
         env:
