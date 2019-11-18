@@ -1,0 +1,28 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v1
+        with:
+          ref: master
+      - name: Install Yarn Dependencies
+        run: yarn install
+      - name: Mix assets
+        run: yarn prod
+      - name: Generate key
+        run: php artisan key:generate
+      - name: Export page
+        run: php artisan export --env=prod --skip-assets
+      - name: GH Pages Deploy
+        uses: maxheld83/ghpages@v0.2.1
+        env:
+          BUILD_DIR: "docs/.vuepress/dist/"
+          GH_PAT: ${{ secrets.GH_PAT }}

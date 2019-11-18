@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "node ./node_modules/.bin/vuepress dev docs",
+    "docs:build": "node ./node_modules/.bin/vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^1.2.0"
   }
 }
