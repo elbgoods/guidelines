@@ -38,8 +38,58 @@ Every method and function **SHOULD** be type-hinted as much as possible (argumen
 ### Docblocks
 
 You **MUST NOT** use docblocks for methods that can be fully type hinted (unless you need a description).
+You **SHOULD** only add a description when it provides more context than the method signature itself. 
+You **MUST** use full sentences for descriptions, including a period at the end.
 
-Only add a description when it provides more context than the method signature itself. Use full sentences for descriptions, including a period at the end.
+## Helpers
+
+Helpers are files with global functions not wrapped inside a class.
+
+* You **MUST** reduce the amount of helper files to an absolute minimum - in best case a single one or none.
+* Helper functions **MUST** wrap an already available method and **MUST NOT** introduce new logic.
+
+## Naming
+
+* You **MUST NOT** use a prefix to indicate it's visibility.
+* You **MUST NOT** use a prefix to indicate it's type.
+
+### Namespaces
+
+* You **MUST** use `UpperCamelCase` for namespaces.
+* You **MUST** use namespaces for multiple classes instead of a prefix.
+  * `\AdminUsersController` => `\Admin\UsersController`
+* You **MUST** use the namespace as directory path.
+
+### Classes
+
+* You **MUST** use `UpperCamelCase` for class names.
+* You **MUST** use the class name as file name.
+* You **SHOULD** use a suffix even if it's already part of the namespace.
+  * `\Contracts\User` => `\Contracts\UserContract`
+  
+### Properties
+
+* You **MUST** use `$lowerCamelCase` for property names.
+
+### Methods
+
+* You **MUST** use `lowerCamelCase()` for method names.
+* You **MUST** prefix methods with `bool` return by `is` or `has`.
+* You **MUST** prefix getter/accessor methods by `get`.
+* You **MUST** prefix setter/mutator methods by `set`.
+
+### Functions
+
+* You **MUST** use `lower_snake_case()` for function names.
+* You **MUST** prefix methods with `bool` return by `is_` or `has_`.
+
+### Variables
+
+* You **MUST** use `$lowerCamelCase` for variable names.
+
+### Array Keys
+
+* You **MUST** use `lower_snake_case` for array keys as long as not **REQUIRED** different by a foreign package or API.
 
 ## Conditions
 
@@ -48,12 +98,12 @@ Only add a description when it provides more context than the method signature i
 You **MUST** use curly-brackets for `if` statements and **MUST NOT** use single line `if` statements.
 
 ```php
-// Good
+// good
 if ($condition) {
    // conditional code
 }
 
-// Bad
+// bad
 if ($condition) // conditional code
 ```
 
@@ -66,7 +116,7 @@ You **SHOULD** use early returns to prevent [complex condition](#complex-conditi
 Following the [early return](#early-return) rule the happy path **SHOULD** be the last return and unindented.
 
 ```php
-// Good
+// good
 if (empty($value) {
     throw new Exception;
 }
@@ -86,7 +136,7 @@ throw new Exception;
 Following the [early return](#early-return) rule you **SHOULD NOT** use/need an `else` block.
 
 ```php
-// Good
+// good
 if (empty($value) {
     throw new Exception;
 }
@@ -106,7 +156,7 @@ if (empty($value) {
 You **SHOULD** use separated `if` statements instead of complex `&&` or `||` joined ones. This increases readability and separated error handling.
 
 ```php
-// Good
+// good
 if (empty($value)) {
    return;
 }
@@ -157,6 +207,83 @@ function hasColor() {
 function hasColor() {
     return !!$this->color;
 }
+```
+
+### type safe comparison
+
+You **SHOULD** use type safe comparison whenever possible instead of weak comparison.
+
+```php
+// good
+return $isAccepted === true;
+return $foo === 'bar';
+return $value === null;
+return $value === null;
+return $value === '';
+
+// bad
+return (bool) $isAccepted;
+return $foo == 'bar';
+return is_null($value);
+return empty($value);
+return empty($value);
+```
+
+### ternary operators
+
+You **MUST** place every portion of a ternary expression on its own line and start with the operator unless it's a simple and short expression.
+
+```php
+// good
+$result = $object instanceof Model
+    ? $object->name
+    : 'A default value';
+
+$name = $isFoo ? 'foo' : 'bar';
+
+// bad
+$result = $object instanceof Model ? $object->name : 'A default value';
+
+$result = $object instanceof Model ?
+    $object->name :
+    'A default value';
+```
+
+## Strings
+
+### early casting/transforming
+
+You **MUST** cast a `string` as early as possible to another type if it's only a "wrapper" used in DB, form or wherever.
+
+```php
+// good
+$agbAccepted = $request['agb_accepted'] === 'yes';
+
+if (! $agbAccepted) {
+    throw new AgbNotAcceptedException();
+}
+
+$model->agb_accepted = $agbAccepted;
+
+// bad
+if ($request['agb_accepted'] !== 'yes') {
+    throw new AgbNotAcceptedException();
+}
+
+$model->agb_accepted = $request['agb_accepted'] === 'yes';
+```
+
+### concatenation / interpolation
+
+You **SHOULD** prefer string interpolation above `sprintf()` and the `.` operator.
+
+```php
+// good
+$greeting = "Hi, I am {$name}.";
+
+// bad
+$greeting = 'Hi, I am ' . $name . '.';
+$greeting sprintf('Hi, I am %s.', $name);
 ```
 
 [PSR-1]: https://www.php-fig.org/psr/psr-1/
