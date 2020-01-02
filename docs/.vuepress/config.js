@@ -1,4 +1,14 @@
+const moment = require('moment');
+
 module.exports = {
+    plugins: [
+        [
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp, lang) => moment(timestamp).format('YYYY-MM-DD HH:mm'),
+            }
+        ]
+    ],
     base: process.env.BASE || '/',
     title: 'Elbgoods Guidelines',
     head: [
@@ -11,7 +21,6 @@ module.exports = {
             { text: 'PHP', link: '/php/' },
             { text: 'JS', link: '/js/' },
             { text: 'API', link: '/api/' },
-            { text: 'GitHub', link: 'https://github.com/Gummibeer/eg-guidelines' },
         ],
         sidebar: {
             '/php/': [
@@ -25,6 +34,10 @@ module.exports = {
             '/api/': [
                 '',
             ],
-        }
+        },
+        lastUpdated: 'Last Updated',
+        repo: 'Gummibeer/eg-guidelines',
+        docsDir: 'docs',
+        editLinks: true,
     }
 };
