@@ -12,7 +12,13 @@ module.exports = {
     base: process.env.BASE || '/',
     title: 'Elbgoods Guidelines',
     head: [
-        ['link', {rel: "shortcut icon", href: "/favicon.ico"}],
+        [
+            'link',
+            {
+                rel: 'shortcut icon',
+                href: '/favicon.ico',
+            }
+        ],
     ],
     themeConfig: {
         sidebarDepth: 2,
