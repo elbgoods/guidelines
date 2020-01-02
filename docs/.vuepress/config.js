@@ -23,10 +23,10 @@ module.exports = {
     themeConfig: {
         sidebarDepth: 2,
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'PHP', link: '/php/' },
-            { text: 'JS', link: '/js/' },
-            { text: 'API', link: '/api/' },
+            {text: 'Home', link: '/'},
+            {text: 'PHP', link: '/php/'},
+            {text: 'JS', link: '/js/'},
+            {text: 'API', link: '/api/'},
         ],
         sidebar: {
             '/php/': [
