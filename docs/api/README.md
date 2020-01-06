@@ -8,11 +8,13 @@ API resources **MUST** follow the [json:api](https://jsonapi.org) standard.
 
 * Create requests **MUST** use a http `POST` method.
 * Successful create responses **MUST** return a `201 - Created` status code.
+* Successful create responses **MUST** return the created entity resource as body.
 
 ### Update
 
 * Update requests **MUST** use a http `PUT` or `PATCH` method.
 * Successful update responses **MUST** return a `200 - OK` status code.
+* Successful update responses **MUST** return the updated entity resource as body.
 
 ### Delete
 
