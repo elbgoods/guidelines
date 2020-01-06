@@ -2,6 +2,23 @@
 
 API resources **MUST** follow the [json:api](https://jsonapi.org) standard.
 
+## Responses
+
+### Create
+
+* Create requests **MUST** use a http `POST` method.
+* Successful create responses **MUST** return a `201 - Created` status code.
+
+### Update
+
+* Update requests **MUST** use a http `PUT` or `PATCH` method.
+* Successful update responses **MUST** return a `200 - OK` status code.
+
+### Delete
+
+* Delete requests **MUST** use a http `DELETE` method.
+* Successful delete responses **MUST** return a `204 - No Content` status code.
+
 ## Packages
 
 Helpful packages/resources could be:
