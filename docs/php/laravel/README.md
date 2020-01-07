@@ -48,10 +48,10 @@ The controller is only a class to receive a request and call business logic with
 ### Naming
 
 * Controllers **MUST** be suffixed by `Controller`.
-* Resource controllers **MUST** use the plural resource name.
-  * `UserController` => `UsersController`
+* Resource controllers **MUST** use the singular resource name.
+  * `UsersController` => `UserController`
 * Resource controllers **MUST** stick to CRUD keywords (`index`, `create`, `store`, `show`, `edit`, `update`, `destroy`).
-* If you need another action you **MUST** use a new resource controller or an invokable controller for a single action.
+* If you need another action you **MUST** use a new resource controller or an invokable controller for a single action which **MUST** have the action verb in it's name.
 
 [Laravel]: https://laravel.com
 [Lumen]: https://lumen.laravel.com
