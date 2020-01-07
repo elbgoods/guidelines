@@ -1,6 +1,20 @@
 # API
 
-API resources **MUST** follow the [json:api](https://jsonapi.org) standard.
+API resources **MUST** follow the [json:api](https://jsonapi.org) standard - at least the [Top Level](#top-level) spec.
+
+## Top Level
+
+A JSON object **MUST** be at the root of every JSON:API response containing data. This object defines a document’s “top level”.
+
+A document **MUST** contain at least one of the following top-level members:
+
+* `data`: the document’s “primary data”
+* `errors`: an array of error objects
+* `meta`: a meta object that contains non-standard meta-information.
+
+The members `data` and `errors` **MUST NOT** coexist in the same document.
+
+A document **SHOULD** contain `links` on top-level.
 
 ## Responses
 
