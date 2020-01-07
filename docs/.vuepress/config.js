@@ -42,7 +42,7 @@ module.exports = {
             ],
         },
         lastUpdated: 'Last Updated',
-        repo: 'Gummibeer/eg-guidelines',
+        repo: 'elbgoods/guidelines',
         docsDir: 'docs',
         editLinks: true,
     }
