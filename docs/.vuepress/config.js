@@ -18,6 +18,12 @@ module.exports = {
                 rel: 'shortcut icon',
                 href: '/favicon.ico',
             }
+        ], [
+            'link',
+            {
+                rel: 'stylesheet',
+                href: '/prism-nord-theme.css',
+            }
         ],
     ],
     themeConfig: {

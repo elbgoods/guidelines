@@ -1,0 +1,144 @@
+/**
+ * @author Gummibeer
+ *
+ * Based on prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+/*********************************************************
+* General
+*/
+#app pre[class*="language-"],
+#app code[class*="language-"] {
+  color: #d8dee9;
+  font-size: 13px;
+  text-shadow: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+#app pre[class*="language-"]::selection,
+#app code[class*="language-"]::selection,
+#app pre[class*="language-"]::mozselection,
+#app code[class*="language-"]::mozselection {
+  text-shadow: none;
+  background: #4c566a;
+}
+@media print {
+    #app pre[class*="language-"],
+    #app code[class*="language-"] {
+    text-shadow: none;
+  }
+}
+#app pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  background: #2e3440;
+}
+#app :not(pre) > code[class*="language-"] {
+  padding: .1em .3em;
+  border-radius: .3em;
+  color: #d8dee9;
+  background: #2e3440;
+}
+/*********************************************************
+* Tokens
+*/
+#app .namespace {
+  opacity: .7;
+}
+#app .token.comment,
+#app .token.prolog,
+#app .token.doctype,
+#app .token.cdata {
+  color: #616e88;
+}
+#app .token.punctuation {
+  color: #d8dee9;
+}
+#app .token.property,
+#app .token.tag,
+#app .token.boolean,
+#app .token.number,
+#app .token.constant,
+#app .token.symbol,
+#app .token.deleted {
+  color: #81a1c1;
+}
+#app .token.selector,
+#app .token.attr-name,
+#app .token.string,
+#app .token.char,
+#app .token.builtin,
+#app .token.inserted {
+  color: #A3BE8C;
+}
+#app .token.operator,
+#app .token.entity,
+#app .token.url,
+#app .language-css .token.string,
+#app .style .token.string {
+  color: #81a1c1;
+  background: #2e3440;
+}
+#app .token.atrule,
+#app .token.attr-value,
+#app .token.keyword {
+  color: #81a1c1;
+}
+#app .token.function {
+  color: #8FBCBB;
+}
+#app .token.regex,
+#app .token.important,
+#app .token.variable {
+  color: #b48ead;
+}
+#app .token.class-name {
+    color: #8FBCBB;
+}
+#app .token.important,
+#app .token.bold {
+  font-weight: bold;
+}
+#app .token.italic {
+  font-style: italic;
+}
+#app .token.entity {
+  cursor: help;
+}
+/*********************************************************
+* Line highlighting
+*/
+#app pre[data-line] {
+  position: relative;
+}
+#app pre[class*="language-"] > code[class*="language-"] {
+  position: relative;
+  z-index: 1;
+}
+#app .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: #434c5e;
+  box-shadow: inset 5px 0 0 #434c5e;
+  z-index: 0;
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
