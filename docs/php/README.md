@@ -117,14 +117,14 @@ Following the [early return](#early-return) rule the happy path **SHOULD** be th
 
 ```php
 // good
-if (empty($value) {
+if (is_null($value)) {
     throw new Exception;
 }
 
 return $value;
 
 // bad
-if (! empty($value) {
+if (! is_null($value)) {
     return $value;
 }
 
@@ -137,14 +137,14 @@ Following the [early return](#early-return) rule you **SHOULD NOT** use/need an 
 
 ```php
 // good
-if (empty($value) {
+if (is_null($value)) {
     throw new Exception;
 }
 
 return $value;
 
 // bad
-if (empty($value) {
+if (is_null($value)) {
     throw new Exception;
 } else {
     return $value;
@@ -157,7 +157,7 @@ You **SHOULD** use separated `if` statements instead of complex `&&` or `||` joi
 
 ```php
 // good
-if (empty($value)) {
+if (is_null($value)) {
    return;
 }
 
@@ -172,7 +172,7 @@ if (strlen($value) >= 50) {
 return $value;
 
 // bad
-if (! empty($value) && is_string($value) && strlen($value) < 50) {
+if (! is_null($value) && is_string($value) && strlen($value) < 50) {
     return $value;
 }
 ```
@@ -283,7 +283,7 @@ $greeting = "Hi, I am {$name}.";
 
 // bad
 $greeting = 'Hi, I am ' . $name . '.';
-$greeting sprintf('Hi, I am %s.', $name);
+$greeting = sprintf('Hi, I am %s.', $name);
 ```
 
 [PSR-1]: https://www.php-fig.org/psr/psr-1/
