@@ -51,5 +51,9 @@ module.exports = {
         repo: 'elbgoods/guidelines',
         docsDir: 'docs',
         editLinks: true,
+        algolia: {
+            apiKey: '3926566425942c14a55f065f8c8a5a93',
+            indexName: 'elbgoods_guidelines'
+        }
     }
 };
