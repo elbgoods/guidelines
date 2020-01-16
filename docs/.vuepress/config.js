@@ -30,11 +30,15 @@ module.exports = {
         sidebarDepth: 2,
         nav: [
             {text: 'Home', link: '/'},
+            {text: 'Git', link: '/git/'},
             {text: 'PHP', link: '/php/'},
             {text: 'JS', link: '/js/'},
             {text: 'API', link: '/api/'},
         ],
         sidebar: {
+            '/git/': [
+                '',
+            ],
             '/php/': [
                 '',
                 '/php/laravel/',
