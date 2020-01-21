@@ -27,7 +27,6 @@ module.exports = {
         ],
     ],
     themeConfig: {
-        sidebarDepth: 2,
         nav: [
             {text: 'Home', link: '/'},
             {text: 'Git', link: '/git/'},
@@ -35,6 +34,7 @@ module.exports = {
             {text: 'JS', link: '/js/'},
             {text: 'API', link: '/api/'},
         ],
+        sidebarDepth: 3,
         sidebar: {
             '/git/': [
                 '',
