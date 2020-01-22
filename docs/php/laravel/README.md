@@ -33,8 +33,6 @@ All [Laravel] projects **MUST** follow these guidelines and the general [PHP](/p
 
 * You **MUST** use `kebab-case` for path segments.
 
-### Naming
-
 ## Controllers
 
 The controller is only a class to receive a request and call business logic with received data.
