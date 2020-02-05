@@ -97,6 +97,12 @@ Helpers are files with global functions not wrapped inside a class.
 
 * You **MUST** use `lower_snake_case` for array keys as long as not **REQUIRED** different by a foreign package or API.
 
+### Macro Methods
+
+Macros are `const` like methods - for example if you construct a "constant" string from config values.
+
+* You **MUST** use the default method naming for macros - `lowerCamelCase()`.
+
 ## Conditions
 
 ### IF statements
