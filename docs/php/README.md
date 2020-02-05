@@ -205,6 +205,22 @@ if (! is_null($index)) {
 }
 ```
 
+### negated instance checking
+
+You **SHOULD** use `! is_a()` instead of `! $class instanceof Class` if you have to negate an instance of condition.
+
+```php
+// good
+if (! is_a($object, MyClass::class)) {
+  //
+}
+
+// bad
+if (! $object instanceof MyClass) {
+  //
+}
+```
+
 ### indirect boolean casting
 
 You **SHOULD NOT** use indirect boolean casting. Instead you **SHOULD** use comparison operators, `is_xyz()` functions or `bool_val()`.
