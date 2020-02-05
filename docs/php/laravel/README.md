@@ -64,5 +64,11 @@ Laravel provides model properties like `$with`, `$appends` or `$withCount` to lo
 * You **MUST** use explicit calls in query builder instead of these properties.
 * You **MUST** use API resources in favor of appending attributes to `toArray()` call.
 
+## Validation Exception
+
+### Naming
+
+* You **MUST** use default array key naming rules for custom validation exceptions - `lower_snake.dot.notation`.
+
 [Laravel]: https://laravel.com
 [Lumen]: https://lumen.laravel.com
