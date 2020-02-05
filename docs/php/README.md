@@ -108,6 +108,12 @@ Macros are `const` like methods - for example if you construct a "constant" stri
 * You **SHOULD** use following pattern to name your test case methods:
 `[entity:it]_can_[do_something]{_when_[some_condition]}`
 
+### Enums
+
+We use [spatie/enum](https://github.com/spatie/enum) or the [spatie/laravel-enum](https://github.com/spatie/laravel-enum) wrapper for Enums in PHP code.
+
+* You **MUST** use `UPPER_SNAKE_CASE` for enum naming.
+
 ## Conditions
 
 ### IF statements
