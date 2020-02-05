@@ -103,6 +103,11 @@ Macros are `const` like methods - for example if you construct a "constant" stri
 
 * You **MUST** use the default method naming for macros - `lowerCamelCase()`.
 
+### Test Cases
+
+* You **SHOULD** use following pattern to name your test case methods:
+`[entity:it]_can_[do_something]{_when_[some_condition]}`
+
 ## Conditions
 
 ### IF statements
