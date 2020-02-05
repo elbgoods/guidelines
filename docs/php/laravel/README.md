@@ -51,5 +51,11 @@ The controller is only a class to receive a request and call business logic with
 * Resource controllers **MUST** stick to CRUD keywords (`index`, `create`, `store`, `show`, `edit`, `update`, `destroy`).
 * If you need another action you **MUST** use a new resource controller or an invokable controller for a single action which **MUST** have the action verb in it's name.
 
+## Keyword Helpers
+
+Laravel provides helper functions to replace common keyword scenarios like `throw_if()`, `abort_unless()` and so on.
+
+* You **SHOULD** use the explicit native PHP keywords in favor of Laravel helpers.
+
 [Laravel]: https://laravel.com
 [Lumen]: https://lumen.laravel.com
