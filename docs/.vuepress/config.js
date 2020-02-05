@@ -31,6 +31,7 @@ module.exports = {
             {text: 'Home', link: '/'},
             {text: 'Git', link: '/git/'},
             {text: 'PHP', link: '/php/'},
+            {text: 'DB', link: '/db/'},
             {text: 'JS', link: '/js/'},
             {text: 'API', link: '/api/'},
         ],
@@ -42,6 +43,9 @@ module.exports = {
             '/php/': [
                 '',
                 '/php/laravel/',
+            ],
+            '/db/': [
+                '',
             ],
             '/js/': [
                 '',
