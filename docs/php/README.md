@@ -37,9 +37,15 @@ Every method and function **SHOULD** be type-hinted as much as possible (argumen
 
 ### Docblocks
 
-You **MUST NOT** use docblocks for methods that can be fully type hinted (unless you need a description).
-You **SHOULD** only add a description when it provides more context than the method signature itself. 
-You **MUST** use full sentences for descriptions, including a period at the end.
+* You **MUST NOT** use docblocks for methods that can be fully type hinted (unless you need a description).
+* You **SHOULD** only add a description when it provides more context than the method signature itself. 
+* You **MUST** use full sentences for descriptions, including a period at the end.
+
+### Imports
+
+* You **MUST** import `use` all classes referenced in this document/class at the top of the file.
+* You **MUST** import `use` global classes - like `Closure` and `Exception`.
+* You **SHOULD** alias classes with common naming conflicts by default `use GuzzleHttp\Client as GuzzleClient;`.
 
 ## Helpers
 
