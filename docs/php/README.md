@@ -37,9 +37,15 @@ Every method and function **SHOULD** be type-hinted as much as possible (argumen
 
 ### Docblocks
 
-You **MUST NOT** use docblocks for methods that can be fully type hinted (unless you need a description).
-You **SHOULD** only add a description when it provides more context than the method signature itself. 
-You **MUST** use full sentences for descriptions, including a period at the end.
+* You **MUST NOT** use docblocks for methods that can be fully type hinted (unless you need a description).
+* You **SHOULD** only add a description when it provides more context than the method signature itself. 
+* You **MUST** use full sentences for descriptions, including a period at the end.
+
+### Imports
+
+* You **MUST** import `use` all classes referenced in this document/class at the top of the file.
+* You **MUST** import `use` global classes - like `Closure` and `Exception`.
+* You **SHOULD** alias classes with common naming conflicts by default `use GuzzleHttp\Client as GuzzleClient;`.
 
 ## Helpers
 
@@ -90,6 +96,23 @@ Helpers are files with global functions not wrapped inside a class.
 ### Array Keys
 
 * You **MUST** use `lower_snake_case` for array keys as long as not **REQUIRED** different by a foreign package or API.
+
+### Macro Methods
+
+Macros are `const` like methods - for example if you construct a "constant" string from config values.
+
+* You **MUST** use the default method naming for macros - `lowerCamelCase()`.
+
+### Test Cases
+
+* You **SHOULD** use following pattern to name your test case methods:
+`[entity:it]_can_[do_something]{_when_[some_condition]}`
+
+### Enums
+
+We use [spatie/enum](https://github.com/spatie/enum) or the [spatie/laravel-enum](https://github.com/spatie/laravel-enum) wrapper for Enums in PHP code.
+
+* You **MUST** use `UPPER_SNAKE_CASE` for enum naming.
 
 ## Conditions
 
@@ -193,6 +216,22 @@ if (! is_null($index)) {
 }
 ```
 
+### negated instance checking
+
+You **SHOULD** use `! is_a()` instead of `! $class instanceof Class` if you have to negate an instance of condition.
+
+```php
+// good
+if (! is_a($object, MyClass::class)) {
+  //
+}
+
+// bad
+if (! $object instanceof MyClass) {
+  //
+}
+```
+
 ### indirect boolean casting
 
 You **SHOULD NOT** use indirect boolean casting. Instead you **SHOULD** use comparison operators, `is_xyz()` functions or `bool_val()`.
@@ -273,18 +312,12 @@ if ($request['agb_accepted'] !== 'yes') {
 $model->agb_accepted = $request['agb_accepted'] === 'yes';
 ```
 
-### concatenation / interpolation
+## Usage
 
-You **SHOULD** prefer string interpolation above `sprintf()` and the `.` operator.
+### compact()
 
-```php
-// good
-$greeting = "Hi, I am {$name}.";
-
-// bad
-$greeting = 'Hi, I am ' . $name . '.';
-$greeting = sprintf('Hi, I am %s.', $name);
-```
+* You **MUST** use explicit array definitions in business logic.
+* You **SHOULD** use `compact()` in test classes - for example to generate routes with model params.
 
 [PSR-1]: https://www.php-fig.org/psr/psr-1/
 [PSR-2]: https://www.php-fig.org/psr/psr-2/

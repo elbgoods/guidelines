@@ -8,7 +8,7 @@ All [Laravel] projects **MUST** follow these guidelines and the general [PHP](/p
 
 * You **MUST** split the top-level route groups (like `app` & `admin` & `api`) into different route files.
 * You **MUST NOT** use a `namespace()` for route groups.
-* You **MUST** use `Route::prefix()->group()` for multiple routes with the same prefix.
+* You **MUST** use `Route::prefix()->name()->group()` for multiple routes with the same prefix.
 * You **MUST** use the HTTP verb as first method.
   * `Route::name()->get()` => `Route::get()->name()`
 * You **MUST** define all routes with a direct definition instead of multiple route defining calls.
@@ -50,6 +50,25 @@ The controller is only a class to receive a request and call business logic with
   * `UsersController` => `UserController`
 * Resource controllers **MUST** stick to CRUD keywords (`index`, `create`, `store`, `show`, `edit`, `update`, `destroy`).
 * If you need another action you **MUST** use a new resource controller or an invokable controller for a single action which **MUST** have the action verb in it's name.
+
+## Keyword Helpers
+
+Laravel provides helper functions to replace common keyword scenarios like `throw_if()`, `abort_unless()` and so on.
+
+* You **SHOULD** use the explicit native PHP keywords in favor of Laravel helpers.
+
+## Model magic properties
+
+Laravel provides model properties like `$with`, `$appends` or `$withCount` to load/append data to every model instance.
+
+* You **MUST** use explicit calls in query builder instead of these properties.
+* You **MUST** use API resources in favor of appending attributes to `toArray()` call.
+
+## Validation Exception
+
+### Naming
+
+* You **MUST** use default array key naming rules for custom validation exceptions - `lower_snake.dot.notation`.
 
 [Laravel]: https://laravel.com
 [Lumen]: https://lumen.laravel.com
