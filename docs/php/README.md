@@ -273,19 +273,6 @@ if ($request['agb_accepted'] !== 'yes') {
 $model->agb_accepted = $request['agb_accepted'] === 'yes';
 ```
 
-### concatenation / interpolation
-
-You **SHOULD** prefer string interpolation above `sprintf()` and the `.` operator.
-
-```php
-// good
-$greeting = "Hi, I am {$name}.";
-
-// bad
-$greeting = 'Hi, I am ' . $name . '.';
-$greeting = sprintf('Hi, I am %s.', $name);
-```
-
 [PSR-1]: https://www.php-fig.org/psr/psr-1/
 [PSR-2]: https://www.php-fig.org/psr/psr-2/
 [PSR-4]: https://www.php-fig.org/psr/psr-4/
