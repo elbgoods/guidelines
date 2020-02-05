@@ -8,7 +8,7 @@ All [Laravel] projects **MUST** follow these guidelines and the general [PHP](/p
 
 * You **MUST** split the top-level route groups (like `app` & `admin` & `api`) into different route files.
 * You **MUST NOT** use a `namespace()` for route groups.
-* You **MUST** use `Route::prefix()->group()` for multiple routes with the same prefix.
+* You **MUST** use `Route::prefix()->name()->group()` for multiple routes with the same prefix.
 * You **MUST** use the HTTP verb as first method.
   * `Route::name()->get()` => `Route::get()->name()`
 * You **MUST** define all routes with a direct definition instead of multiple route defining calls.
