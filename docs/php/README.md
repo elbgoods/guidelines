@@ -306,6 +306,13 @@ if ($request['agb_accepted'] !== 'yes') {
 $model->agb_accepted = $request['agb_accepted'] === 'yes';
 ```
 
+## Usage
+
+### compact()
+
+* You **MUST** use explicit array definitions in business logic.
+* You **SHOULD** use `compact()` in test classes - for example to generate routes with model params.
+
 [PSR-1]: https://www.php-fig.org/psr/psr-1/
 [PSR-2]: https://www.php-fig.org/psr/psr-2/
 [PSR-4]: https://www.php-fig.org/psr/psr-4/
