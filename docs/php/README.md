@@ -235,6 +235,7 @@ if (! $object instanceof MyClass) {
 ### indirect boolean casting
 
 You **SHOULD NOT** use indirect boolean casting. Instead you **SHOULD** use comparison operators, `is_xyz()` functions or `bool_val()`.
+PHP has some strange type-weak comparisons which we want to avoid: https://www.php.net/manual/de/types.comparisons.php 
 
 ```php
 // good
