@@ -1,4 +1,4 @@
-# External Projects Planing
+# External Project Planning
 
 ## Tickets
 

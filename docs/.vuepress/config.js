@@ -34,7 +34,7 @@ module.exports = {
             {text: 'DB', link: '/db/'},
             {text: 'JS', link: '/js/'},
             {text: 'API', link: '/api/'},
-            {text: 'Planing', link: '/planing/'},
+            {text: 'Planning', link: '/planning/'},
         ],
         sidebarDepth: 3,
         sidebar: {
@@ -55,9 +55,9 @@ module.exports = {
             '/api/': [
                 '',
             ],
-            '/planing/': [
+            '/planning/': [
                 '',
-                '/planing/external/',
+                '/planning/external/',
             ],
         },
         lastUpdated: 'Last Updated',
