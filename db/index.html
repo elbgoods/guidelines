@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Database | Elbgoods Guidelines</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/prism-nord-theme.css">
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.4116429e.css" as="style"><link rel="preload" href="/assets/js/app.4f03c926.js" as="script"><link rel="preload" href="/assets/js/3.acff0c7f.js" as="script"><link rel="preload" href="/assets/js/9.64995bfe.js" as="script"><link rel="prefetch" href="/assets/js/10.4aad67a2.js"><link rel="prefetch" href="/assets/js/11.f37de6b1.js"><link rel="prefetch" href="/assets/js/12.4519a4ed.js"><link rel="prefetch" href="/assets/js/13.10491b2a.js"><link rel="prefetch" href="/assets/js/14.63d88379.js"><link rel="prefetch" href="/assets/js/15.40b7dc8c.js"><link rel="prefetch" href="/assets/js/4.3b9287ec.js"><link rel="prefetch" href="/assets/js/5.7cea1c0c.js"><link rel="prefetch" href="/assets/js/6.75a239b9.js"><link rel="prefetch" href="/assets/js/7.6a438b8a.js"><link rel="prefetch" href="/assets/js/8.76f8a2e7.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.72c12505.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4116429e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Elbgoods Guidelines</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/php/" class="nav-link">
+  PHP
+</a></div><div class="nav-item"><a href="/db/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  DB
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/planning/" class="nav-link">
+  Planning
+</a></div> <a href="https://github.com/elbgoods/guidelines" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/git/" class="nav-link">
+  Git
+</a></div><div class="nav-item"><a href="/php/" class="nav-link">
+  PHP
+</a></div><div class="nav-item"><a href="/db/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  DB
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/planning/" class="nav-link">
+  Planning
+</a></div> <a href="https://github.com/elbgoods/guidelines" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/db/" aria-current="page" class="active sidebar-link">Database</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="database"><a href="#database" class="header-anchor">#</a> Database</h1> <ul><li>you <strong>MUST</strong> use <code>PostgreSQL</code> as database server for SQL based databases - even prototypes <strong>SHOULD NOT</strong> be done with <code>MySQL</code> or something else</li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/elbgoods/guidelines/edit/master/docs/db/README.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2020-02-05 14:26</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4f03c926.js" defer></script><script src="/assets/js/3.acff0c7f.js" defer></script><script src="/assets/js/9.64995bfe.js" defer></script>
+  </body>
+</html>
